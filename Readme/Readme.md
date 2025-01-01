@@ -1,6 +1,6 @@
-﻿Realtime Object Detection for Robotic Arm
+##﻿Realtime Object Detection for Robotic Arm
 
-Applications
+#Applications
 
 A project report submitted
 
