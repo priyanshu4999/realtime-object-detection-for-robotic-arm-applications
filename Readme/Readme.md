@@ -464,12 +464,4 @@ The results show a successful detection and picking rate that can be further imp
 11. “Welcome to Detecto’s Documentation!” [Online]. Available: [https://detecto.readthedocs.io/en/latest/](https://detecto.readthedocs.io/en/latest/)
 
 
-1  dIntiegrnitetaSlocuorcme mons.bryant.edu <1%![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.038.png)![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.039.png)
-1  sInctehrnoetlSaorusrcme ine.mst.edu <1%![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.040.png)![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.041.png)
-1  "SCcoiemncpeutaenrdVBisuiosnine–sEsCMCVed2i0a1L6L"C, ,S2p0ri1n6ger <1% ![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.042.png)Publication![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.043.png)
-1  CIntleirnneict SaoluTrcreials.gov <1%![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.044.png)![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.045.png)
-1  lInuteprn.elut Sbou.rlcue.se <1%![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.046.png)![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.047.png)
-1  wIntewrnwet .Smourdcepi.com <1%![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.048.png)![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.049.png)![](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.050.png)
-
-Exclude quotes On Exclude matches < 10 words Exclude bibliography On
 
