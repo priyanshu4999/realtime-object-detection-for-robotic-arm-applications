@@ -195,19 +195,19 @@ All classification and detection algorithms rely heavily on feature extraction f
 
 To address this, ResNet uses shortcut connections or identity shortcut connections. The input after activation, given by the function \( F(x) \), has shortcut connections that add \( x \) to the activated input, resulting in \( H(x) = F(x) + x \). During backpropagation, the gradient of \( H(x) \) maintains its identity value, preventing gradient loss and allowing deeper layers to learn useful features. This enables ResNet to extend its depth up to 152 layers. For this project, ResNet50 (with 50 layers) is used.
 
-![ResNet Results](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.013.png)
+![ResNet Results](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.013.png)
 
 ### Evaluation of Object Detection Models
 
 In classification problems, a confusion matrix is used for evaluation. However, detection problems also involve localization, which needs to be evaluated using mean Average Precision (mAP). The Intersection over Union (IOU) metric calculates the precision of object detection algorithms. IOU is the ratio of the intersecting area of true and predicted ground boxes to the union area of both boxes. A confusion table with cumulative true positives, true negatives, false positives, and false negatives is used to get the precision-recall distribution. The area under this distribution gives the mAP evaluation.
 
-![IOU Example](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.015.png)
+![IOU Example](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.015.png)
 
 ### Transfer Learning
 
 Transfer Learning is a powerful technique that implements models trained for a certain task on different but similar tasks. For this project, a pre-trained Faster R-CNN model based on ResNet-50 with weights pre-trained on the COCO dataset (containing 330,000 images of 80 different classes) is used. Training this on a desktop with limited computing power would take several hours to a few days. However, using transfer learning, a small set of 40-50 images of a particular class can be used to selectively train the network within a few minutes. For this project, a set of 40 images each of rubber ducks and balls is used to detect these two classes, effectively reducing training time to a few minutes.
 
-![ResNet Diagram](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.014.png)
+![ResNet Diagram](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.014.png)
 
 ## References
 
@@ -316,7 +316,7 @@ Detecto, built on PyTorch, offers easy access to training a custom object detect
 
 ## 4. LabelImg
 
-![LabelImg](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.016.jpeg)
+![LabelImg](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.016.jpeg)
 
 Figure 3.1: Software helps fast generating data for object detection algorithms. Open the directory with collection of images, mark the bounding box around the target object and label the object. This simple cycle generates a ".xml" file containing labels and XY coordinates of bounding boxes.
 
@@ -351,7 +351,7 @@ The action space consists of continuous motions in Cartesian coordinates and rot
 
 Each episode consists of 50 steps, providing ample time for the arm to complete its tasks. Information on the end effector's orientation and position is provided by the forward kinematics function.
 
-![Step Size Selection](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.017.jpeg)
+![Step Size Selection](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.017.jpeg)
 
 Figure 3.2: Selection of step size is crucial in reducing error. As the step size increases, the magnitude of error also increases, whereas the second graph shows the relative error size compared to step size. This is important as the accumulation of small errors can result in large errors. The step size with the smallest relative error is selected, which is step size 0.001.
 
@@ -379,7 +379,7 @@ The reward scheme is designed to reduce the distance between the end effector an
 
 ## mAP Evaluation
 
-![mAP Estimation](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.024.jpeg)
+![mAP Estimation](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.024.jpeg)
 
 Figure 4.7: mAP estimation given by area under precision-recall curve, mAP = 0.963, IOU > 0.8
 
@@ -392,7 +392,7 @@ Figure 4.7: mAP estimation given by area under precision-recall curve, mAP = 0.9
 
 An mAP evaluation of 0.96 for an IOU of 0.8 is a good score, although it's based on a small test dataset of 30 images. The average detection speed is 0.27 ms. The following plots show mAP estimations for different IOUs, useful for characterizing the detection algorithm when comparing with other models.
 
-![mAP Estimates](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.025.jpeg)
+![mAP Estimates](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.025.jpeg)
 
 Figure 4.8: mAP estimates help evaluate different models for the same IOU curves. The closer the curve area is to 1, the better the detection algorithm.
 
@@ -400,7 +400,7 @@ Figure 4.8: mAP estimates help evaluate different models for the same IOU curves
 
 Below images show detection results on clustered objects.
 
-![Real-Time Detection](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.026.jpeg)
+![Real-Time Detection](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.026.jpeg)
 
 Figure 4.9: Real-time detection on two instances, with objects clustered together and occlusion created by the gripper. The detector classifies objects with classification probability threshold > 0.95 and IOU threshold > 0.8.
 
@@ -429,19 +429,19 @@ Output coordinates from the detection module are used as input to a feed-forward
 |hidden|10|relu|
 |output|2|linear|
 
-![Validation Loss](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.027.jpeg)
+![Validation Loss](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.027.jpeg)
 
 Figure 4.10: Validation loss approaches 0.0132 and test loss approaches 0.0107, with train, test, and validation split of 0.4, 0.4, 0.2 respectively.
 
-![Validation Accuracy](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.028.jpeg)
+![Validation Accuracy](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.028.jpeg)
 
 Figure 4.11: Validation accuracy approaches 0.983 and test accuracy approaches 0.937, with train, test, and validation split of 0.4, 0.4, 0.2 respectively.
 
-![Error Distribution](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.029.jpeg)
+![Error Distribution](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.029.jpeg)
 
 Figure 4.12: Distribution showing the degree of deviations of 1600 points. Majority of error is within the magnitude of 0.02 units.
 
-![Size Comparison](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.030.png)
+![Size Comparison](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.030.png)
 
 Figure 4.13: An idea of sizes in simulation.
 
@@ -449,7 +449,7 @@ Figure 4.13: An idea of sizes in simulation.
 
 Output X, Y coordinates are fed to the neural network to complete the pipeline. The model successfully picks objects 85 out of 100 times. The results are impacted by the position prediction model's error. 
 
-![Simulation Results](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.031.jpeg)
+![Simulation Results](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.031.jpeg)
 
 Figure 4.14: Number of episodes where the goal is achieved corresponding to total episodes and size of the targeted object. 85 out of 100 times the articulated arm was able to pick up the detected object, with an average step time of 3.337 ms.
 
@@ -463,7 +463,7 @@ The results show a successful detection and picking rate that can be further imp
 3. **Inverse Kinematics:** The current model uses open-loop inverse kinematics, resulting in small step sizes and slow single steps. More efficient control schemes are needed. Alternatively, directly training a reinforcement learning model using joint states could eliminate the problem of step size and speed up the process. The current predefined action space does not include changing the orientation of the end effector, fixing its orientation.
 4. **Orientation Consideration:** A new approach considering the orientations of both the end effector and the object is needed. While the top-down approach works well for the simulated objects, it fails with flat or elongated objects like books, plates, pencils, or pipes that require a specific orientation of the end effector.
 
-   ![Fixed Approach Direction](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.032.jpeg)
+   ![Fixed Approach Direction](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.032.jpeg)
    
    Figure 5.1: Direction of approach is always fixed (from top), irrespective of the object's orientation. This causes issues with objects having varying dimensions, such as rods or flat objects like plates or pans.
    
@@ -471,7 +471,7 @@ The results show a successful detection and picking rate that can be further imp
 6. **Robust Mapping Scheme:** A more robust box-to-position mapping scheme is needed, as the current method highly relies on camera orientation, reducing ease of reusability in different setups.
 7. **Object Tracking:** The model heavily relies on distance as the metric for object selection. While it can categorize different classes of objects, it fails to differentiate between identical objects of the same class. It also lacks object tagging across image frames, treating each image as a new set of objects.
 
-   ![Top Direction Approach](Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.033.jpeg)
+   ![Top Direction Approach](imagesReadme/Aspose.Words.7685267e-5255-4cb6-a77f-9a5dedd20ad8.033.jpeg)
    
    Figure 5.2: End effector always approaches from the top direction, irrespective of the object's pose and orientation.
 
