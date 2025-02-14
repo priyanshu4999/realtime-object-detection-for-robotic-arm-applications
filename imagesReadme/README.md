@@ -1,2 +1,2 @@
 ***** Ignore this folder
-just contains images for readme text
+just contains images for readme text.
